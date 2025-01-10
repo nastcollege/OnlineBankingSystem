@@ -22,6 +22,7 @@ try {
 	ResultSet rs = stmt.executeQuery();
 	while (rs.next()) {
 		session.setAttribute("user",username);
+		session.setAttribute("userId",rs.getInt("id"));
 		auth = true;
 	}
 	conn.close();

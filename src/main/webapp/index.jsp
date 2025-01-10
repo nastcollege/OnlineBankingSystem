@@ -14,18 +14,10 @@ if(session.getAttribute("user")==null){
 Welcome, <%=session.getAttribute("user") %>
 <a href="logout.jsp">Logout</a>
 <hr/>
-	<form method="post" action="#">
-		<label>Enter Name</label> <input type="text" name="txt_name"
-			placeholder="Enter name" />
-		<button type="submit" name="btn_greet">Greet</button>
-	</form>
-	<h1>
-		Welcome
-		<%
-	if ((request.getParameter("btn_greet")) != null) {
-		out.print(request.getParameter("txt_name"));
-	}
-	%>
-	</h1>
+	<a href="account_request.jsp">Request Bank Account</a> &nbsp;&nbsp;&nbsp;
+	<a href="fund_transfer.jsp">Fund Transfer</a> &nbsp;&nbsp;&nbsp;
+	<a href="fund_request.jsp">Fund Request</a> &nbsp;&nbsp;&nbsp;
+	<a href="transaction_history.jsp">Transaction History</a> &nbsp;&nbsp;&nbsp;
+	
 </body>
 </html>
